@@ -1,0 +1,288 @@
+body{
+    min-height: 2000px;
+}
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+
+label{
+  position: relative;
+  display: inline-block;
+  background-color: #fff;
+  padding: 5px 12px;
+  transition: all 1s ease;
+  border-radius: 0;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+  &::after{
+    content: '';
+    display: block;
+    height: 2px;
+    width: 80%;
+  
+    transition: all 1s ease 0.5s;
+  }
+  input{
+    transition: width 1s ease, opacity 0.5s ease 0.5s;
+    opacity: 1;
+    width: 180px;
+    height: 25px;
+    border: 0;
+    outline: none;
+    color: darken(#F0AD4E, 25)
+  }
+  i{
+    position: absolute;
+    top: 11px;
+    right: 11px;
+    color: #333;
+    cursor: pointer;
+  }
+  &[data-state="close"]{
+    border-radius: 30px;
+    padding: 5px 5px;
+     transition: all 1s ease;
+    &::after{
+      width: 0%;
+      transition: all 0.3s ease;
+    }
+    i{
+      pointer-events: none;
+    }
+    input{
+      width: 28px;
+      height: 25px;
+      opacity:0;
+      cursor: pointer;
+      transition: opacity 0.5s ease, width 1s ease;
+      -webkit-appearance:none
+    } 
+  }
+}
+
+/* 1 */
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #222;
+}
+
+#cCarousel {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+}
+
+#cCarousel .arrow {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  width: 45px;
+  height: 45px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  z-index: 1;
+  font-size: 26px;
+  color: white;
+  background: #00000072;
+  cursor: pointer;
+}
+
+#cCarousel #prev {
+  left: 0px;
+}
+
+#cCarousel #next {
+  right: 0px;
+}
+
+#carousel-vp {
+  width: 770px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+}
+
+@media (max-width: 770px) {
+  #carousel-vp {
+    width: 510px;
+  }
+}
+
+@media (max-width: 510px) {
+  #carousel-vp {
+    width: 250px;
+  }
+}
+
+#cCarousel #cCarousel-inner {
+  display: flex;
+  position: absolute;
+  transition: 0.3s ease-in-out;
+  gap: 10px;
+  left: 0px;
+}
+
+.cCarousel-item {
+  width: 250px;
+  height: 365px;
+  border: 2px solid white;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.cCarousel-item img {
+  width: 100%;
+  object-fit: cover;
+  min-height: 246px;
+  color: white;
+}
+
+.cCarousel-item .infos {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background: white;
+  color: black;
+}
+
+.cCarousel-item .infos button {
+  background: #222;
+  padding: 10px 30px;
+  border-radius: 15px;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* 1 AKHIR */
+body {
+  width: 100% !important;
+  height: 100% !important;
+  padding: 0;
+  -webkit-text-size-adjust: none;
+  /* stop WebKit and Windows mobile changing text size */
+  -ms-text-size-adjust: 100%;
+  /* stop WebKit and Windows mobile changing text size */
+  margin: 0 auto !important;
+  /* fix email not centered on Android 4.4 + Samsung Mail */
+  background: #ececec;
+}
+
+
+/* Remove spacing between tables in Outlook 2007 and up */
+
+img {
+  border: 0;
+  line-height: 100%;
+  outline: none;
+  text-decoration: none;
+  -ms-interpolation-mode: bicubic;
+  /* smoother resized images in Internet Explorer */
+}
+
+
+@media screen and (max-width: 580px) {
+  /* centre on gmail iphone */
+  .container {
+    width: 100vw !important;
+  }
+
+  .rwd-line {
+    display: block;
+  }
+
+  .center {
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+  .img {
+    width: 100% !important;
+    height: auto !important;
+  }
+  .width100 {
+    width: 100% !important;
+  }
+  .mobilehide {
+    display: none !important;
+  }
+}
+
+
+/* sevice section style */
+.service-heaader{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.service-header h1{
+  position: relative;
+}
+
+.service-header h1::before{
+  content: "";
+  width: 60px;
+  height: 60px;
+  background: url("C:\Users\LABKOM\Documents\Dasar Dasar Kejuruan X PPLG 3\regina febri nuraeni\Portofolio\Image\accent1.svg");
+  position: absolute;
+  left: -20px;
+  top: -10px;
+  z-index: -1;
+}
+
+.service-detail{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 128px;
+  margin-top: 72px;
+}
+
+.service-detail-item{
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.service-detail-item:hover{
+  transform: scale(1.15);
+}
+
+.service-detail-item:hover img{
+  filter: grayscale(0);
+}
+
+.service-detail-item img{
+  width: 1005;
+  filter: grayscale(1);
+}
+
+.service-detail-item h2{
+  padding: 0 16px;
+}
+
+.service-detail-item p{
+  font-size: 16px;
+  padding: 0 16px;
+}
+
+.box{
+  padding: 30px;
+
+  background: #c1b3b3;
+  margin: 0px 0px;
+
+}
